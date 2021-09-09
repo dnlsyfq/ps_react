@@ -128,3 +128,79 @@ ReactDOM.render(
 <div className=""></div>
 ```
 
+### JSX 2 
+// create component with function
+```
+function Header(){
+    return (
+        <header>
+            <h1>Scoreboard</h1>
+            <span className="stats">Players: 1</span>
+        </header>
+    );
+}
+
+ReactDOM.render(
+    <Header />,
+    document.getElementById('root')
+)
+```
+
+* arrow function component
+```
+const Header = () => (
+        <header>
+            <h1>Scoreboard</h1>
+            <span className="stats">Players: 1</span>
+        </header>
+    );
+
+
+ReactDOM.render(
+    <Header />,
+    document.getElementById('root')
+)
+
+```
+
+* composition function component
+
+```
+
+
+const Header = () => (
+        <header>
+            <h1>Scoreboard</h1>
+            <span className="stats">Players: 1</span>
+        </header>
+    );
+
+const Player = () => {
+    return (
+        <div className="player">
+            <span className="player-name">
+                Guil
+            </span>
+
+            <Counter />
+        </div>
+    );
+}
+
+const Counter = () => {
+    return (
+        <div className="counter">
+            <button className="counter-action decrement"> - </button>
+            <span className="counter-score">35</span>
+            <button className="counter-action increment"> + </button>
+        </div>
+    )
+}
+
+
+ReactDOM.render(
+    <Player />,
+    document.getElementById('root')
+)
+
+```
