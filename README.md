@@ -464,6 +464,9 @@ Data gets handle in react
 
 class component offer more powerful way to build , class allow to use state
 
+state
+1. component state - state that is specific to a component and not share outside of component
+2. application state - data available to entire application
 
 * convert function to class 
 ```
@@ -810,3 +813,11 @@ ReactDOM.render(
 ### create application state
 
 // remove item from state
+```
+1. convert from function to class (stateful component)
+2. state is an object that stores all data component need
+
+
+```
+
+* props what react uses to pass data from component to component, pass function thru props even data from state
